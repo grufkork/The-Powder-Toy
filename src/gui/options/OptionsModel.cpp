@@ -228,7 +228,7 @@ void OptionsModel::SetPerfectCircle(bool perfectCircle)
 
 bool OptionsModel::GetMomentumScroll()
 {
-	return Client::Ref().GetPrefBool("MomentumScroll", false);
+	return Client::Ref().GetPrefBool("MomentumScroll", true);
 }
 
 void OptionsModel::SetMomentumScroll(bool state)

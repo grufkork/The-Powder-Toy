@@ -144,10 +144,15 @@ void ScrollPanel::XTick(float dt)
 	offsetX += xScrollVel;
 
 
-	if (momentumScroll)
+	if (momentumScroll) {
+		if (yScrollVel > -0.5f && yScrollVel < 0.5)
+			yScrollVel = 0;
 		yScrollVel *= 0.98f;
-	else 
+	}
+	else
+	{
 		yScrollVel = 0.0f;
+	}
 
 	xScrollVel*=0.98f;
 
